@@ -311,7 +311,7 @@ async def on_Callback(c, m):
         await m.answer()
         rep = await m.message.reply("**⏳ يـعـالـج..**", quote=True)
         device = random.choice(PHONE_MODELS)
-        client_tele = TelegramClient(StringSession(), api_id, api_hash, device_model=device, system_version="Mobile", app_version="1.0")
+        client_tele = TelegramClient(StringSession(), api_id, api_hash, device_model=device, system_version="Mobile", app_version="1.44.0")
         await client_tele.connect()
         await rep.delete()
         
