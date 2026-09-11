@@ -82,14 +82,29 @@ if ownerID not in botdb.get(DB_KEY)["admins"]:
     data["admins"].append(ownerID)
     botdb.set(DB_KEY, data)
 
-# قائمة الهواتف العشوائية للجلسات
+# قائمة الهواتف العشوائية للجلسات (قديمة وجديدة)
 PHONE_MODELS = [
-    "iPhone 15 Pro Max", "iPhone 14 Pro", 
-    "Infinix Note 30", "Infinix Zero Ultra",
-    "Tecno Spark 10 Pro", "Tecno Camon 20",
-    "Redmi Note 12 Pro", "Xiaomi 13 Pro", 
-    "Samsung Galaxy S23 Ultra", "Samsung Galaxy Z Fold 5",
-    "Sony Xperia 1 V"
+    # iPhone
+    "iPhone 6", "iPhone 7 Plus", "iPhone 8", "iPhone X", "iPhone 11 Pro",
+    "iPhone 12 mini", "iPhone 13 Pro", "iPhone 14 Plus", "iPhone 15 Pro Max",
+    # Samsung
+    "Samsung Galaxy S7", "Samsung Galaxy S9", "Samsung Galaxy S10+", "Samsung Galaxy S20 Ultra",
+    "Samsung Galaxy S22", "Samsung Galaxy S23 Ultra", "Samsung Galaxy S24 Ultra",
+    "Samsung Galaxy Note 10", "Samsung Galaxy Note 20 Ultra", "Samsung Galaxy A54",
+    # Infinix
+    "Infinix Hot 10", "Infinix Hot 30", "Infinix Note 11", "Infinix Note 30 Pro",
+    "Infinix Zero 8", "Infinix Zero Ultra", "Infinix Smart 7",
+    # Xiaomi
+    "Xiaomi Mi 9", "Xiaomi Mi 10T", "Xiaomi 12 Pro", "Xiaomi 13 Ultra", "Xiaomi 14 Pro",
+    # Redmi
+    "Redmi Note 7", "Redmi Note 8 Pro", "Redmi Note 10", "Redmi Note 12 Pro+", "Redmi Note 13 Pro",
+    # OnePlus
+    "OnePlus 6", "OnePlus 7T Pro", "OnePlus 8T", "OnePlus 9 Pro", "OnePlus 11",
+    "OnePlus 12", "OnePlus Nord CE 3",
+    # iQOO
+    "iQOO 7", "iQOO 9 Pro", "iQOO 11", "iQOO 12 Pro", "iQOO Neo 7",
+    # Vivo
+    "Vivo V15", "Vivo V21", "Vivo V29", "Vivo X70 Pro", "Vivo X90 Pro+", "Vivo X100 Pro"
 ]
 
 # دالة العد التنازلي
@@ -448,3 +463,4 @@ async def on_messages(c, m):
 app.start()
 print("تم تشغيل البوت بنجاح - تمت برمجة التحديثات @WWSVA")
 idle()
+
